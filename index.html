@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+        <!-- Otros elementos del encabezado -->
+       
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Humilde</title>
+    <link rel="stylesheet" href="diseño.css">
+    <style>
+        /* Estilos adicionales */
+        .contenedor-seleccion {
+            text-align: center; /* Centra el texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Reproductor de Musica</h1>
+    <div id="reproductor">
+        <audio id="audio"></audio>
+        <div id="controles">
+            <button id="play">Reproducir</button>
+            <button id="pause">Pausar</button>
+            
+        </div>
+        <div id="lista">
+            <ul id="listaReproduccion"></ul>
+        </div>
+    </div>
+    <h2> ↓ Añada una nueva canción a la lista
+        ↓   
+    </h2>
+    <input type="file" id="seleccionArchivoCancion" accept=".mp3">
+    
+    <script src="script.js"></script>
+    <script src="newScript.js></script>
+    
+
+</body>
+</html>
