@@ -6,8 +6,10 @@ body {
     background-color: #0b0c69;
     background-image: url('109220182_p0.png');
     background-size: cover;
-    background-position: center; /* Asegura que la imagen esté centrada */
-    background-repeat: no-repeat;
+    
+    
+    
+    
 }
 
 h1 {
@@ -18,16 +20,16 @@ h1 {
 }
 
 .converter {
-    max-width: 400px; /* Puede ser ajustado para adaptarse a diferentes tamaños de pantalla */
+    max-width: 400px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(208, 211, 214, 0.5);
-    display: flex;
-    flex-direction: column; /* Utiliza Flexbox para estructura flexible */
-    align-items: center;
+    background-color: rgba(208, 211, 214, 0.5); /* Cambiar el último valor (0.5) para ajustar la transparencia */
 }
+
+
+
 
 label, select, input, button {
     display: block;
@@ -35,13 +37,13 @@ label, select, input, button {
 }
 
 input[type="number"] {
-    width: 100%; /* Mantener ancho completo */
+    width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
 
 button {
-    width: 100%; /* Ancho completo para asegurar compatibilidad con móviles */
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -59,34 +61,19 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Estilos para dispositivos con un ancho máximo de 768px */
+/* Estilos generales */
+
+/* Estilos para dispositivos con un ancho máximo de 768px (tabletas y dispositivos móviles) */
 @media screen and (max-width: 768px) {
-    .converter {
-        padding: 10px; /* Reducir padding en dispositivos pequeños */
-        max-width: 100%; /* Ancho completo para pantallas pequeñas */
-    }
-
-    label, select, input, button {
-        font-size: 14px; /* Disminuir tamaño de fuente */
-    }
-
-    input[type="number"] {
-        padding: 6px; /* Reducir padding para dispositivos pequeños */
-    }
+    /* Estilos específicos para dispositivos móviles y tabletas */
 }
 
-/* Estilos para dispositivos con un ancho mínimo de 768px y un máximo de 1024px */
+/* Estilos para dispositivos con un ancho mínimo de 768px y un máximo de 1024px (tabletas en modo horizontal y pantallas más pequeñas) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .converter {
-        padding: 15px; /* Ajustar padding para dispositivos medianos */
-        max-width: 600px; /* Ajustar ancho para dispositivos medianos */
-    }
+    /* Estilos específicos para tabletas en modo horizontal y pantallas más pequeñas */
 }
 
-/* Estilos para dispositivos con un ancho mínimo de 1024px */
+/* Estilos para dispositivos con un ancho mínimo de 1024px (pantallas más grandes como computadoras de escritorio) */
 @media screen and (min-width: 1024px) {
-    .converter {
-        padding: 20px; /* Ajustar padding para dispositivos grandes */
-        max-width: 800px; /* Mayor ancho para pantallas más grandes */
-    }
+    /* Estilos específicos para pantallas más grandes como computadoras de escritorio */
 }
