@@ -1,119 +1,92 @@
-/* Fondo de toda la página */
 body {
-    background-color: #050A30; /* Color de fondo azul noche */
-    color: #fff; /* Color de texto blanco */
-    font-family: Arial, sans-serif; /* Fuente predeterminada */
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
-}
-
-/* Estilos para el encabezado */
-h1 {
-    text-align: center; /* Centra el texto del encabezado */
-    margin-bottom: 20px; /* Agrega espacio inferior */
-}
-
-h2 {
-    text-align: center; /* Centra el texto del encabezado */
-    margin-bottom: 15px; /* Agrega espacio inferior */
-}
-
-/* Lista de canciones */
-#lista {
-    text-align: center; /* Centra el contenido dentro del contenedor */
-}
-
-#lista ul {
-    list-style: decimal; /* Enumera los elementos de la lista */
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    text-align: left; /* Alinea el texto a la izquierda */
-    display: inline-block; /* Permite que la lista se centre */
+    box-sizing: border-box;
+    background-color: #0b0c69;
+    background-image: url('109220182_p0.png');
+    background-size: cover;
+    background-position: center; /* Asegura que la imagen esté centrada */
+    background-repeat: no-repeat;
 }
 
-#lista ul li {
-    padding: 10px; /* Espacio entre elementos de la lista */
-    border-bottom: 1px solid #eee; /* Línea divisoria entre elementos */
-    cursor: pointer; /* Indicador de cursor al pasar el mouse */
-    text-align: left; /* Alinea el texto a la izquierda */
+h1 {
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    text-shadow: 1px 1px 1px black;
 }
 
-#lista ul li:hover {
-    background-color: #3366CC; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff;
+.converter {
+    max-width: 400px; /* Puede ser ajustado para adaptarse a diferentes tamaños de pantalla */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(208, 211, 214, 0.5);
+    display: flex;
+    flex-direction: column; /* Utiliza Flexbox para estructura flexible */
+    align-items: center;
 }
 
-
-/* Estilos para el área de selección de archivo */
-#seleccionArchivoCancion {
-    display: block; /* Hace que el área de selección sea un bloque */
-    margin: 20px auto; /* Centra el área de selección */
-    text-align: center; /* Centra el texto dentro del área de selección */
+label, select, input, button {
+    display: block;
+    margin-bottom: 10px;
 }
 
-/* Contenedor principal del reproductor */
-#reproductor {
-    width: 100%; /* Ancho máximo para adaptarse al dispositivo */
-    max-width: 600px; /* Ancho máximo del reproductor */
-    margin: 20px auto; /* Centra el reproductor */
-    background-color: #1DB954; /* Color de fondo del contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 20px; /* Espaciado interno */
+input[type="number"] {
+    width: 100%; /* Mantener ancho completo */
+    padding: 8px;
+    box-sizing: border-box;
 }
 
-/* Controles de reproducción */
-#controles {
-    display: flex; /* Alinea los botones horizontalmente */
-    justify-content: space-around; /* Distribuye el espacio entre botones */
+button {
+    width: 100%; /* Ancho completo para asegurar compatibilidad con móviles */
     padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Estilos para los botones de reproducción */
-#play, #pause {
-    color: #fff; /* Color de texto de los botones */
-    border: none; /* Elimina el borde */
-    padding: 0; /* Elimina el espacio interno de los botones */
-    cursor: pointer; /* Indicador de cursor al pasar el mouse */
-    font-size: 18px; /* Tamaño de los iconos */
-    width: 40px; /* Ancho del botón */
-    height: 40px; /* Altura del botón */
-    border-radius: 50%; /* Hace que los botones sean circulares */
-    background-size: 90%; /* Tamaño de la imagen de fondo */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+button:hover {
+    background-color: #0056b3;
 }
 
-/* Estilos para el botón de reproducir */
-#play {
-    background-image: url("tocar.png"); /* Imagen de fondo para el botón de reproducir */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-/* Estilos para el botón de pausar */
-#pause {
-    background-image: url("boton-de-pausa.png"); /* Imagen de fondo para el botón de pausar */
-}
+/* Estilos para dispositivos con un ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+    .converter {
+        padding: 10px; /* Reducir padding en dispositivos pequeños */
+        max-width: 100%; /* Ancho completo para pantallas pequeñas */
+    }
 
-/* Efecto hover para los botones */
-#play:hover, #pause:hover {
-    background-color: #555;
-}
+    label, select, input, button {
+        font-size: 14px; /* Disminuir tamaño de fuente */
+    }
 
-/* Elemento de audio */
-#audio {
-    width: 100%; /* El audio ocupa todo el ancho del reproductor */
-    height: auto; /* Altura automática */
-    margin-top: 20px; /* Espacio superior del audio */
-}
-
-/* Estilos para hacer la página responsive */
-@media only screen and (max-width: 600px) {
-    #reproductor {
-        width: 90%; /* Ancho máximo del reproductor en dispositivos pequeños */
-        margin: 10px auto; /* Centra el reproductor */
+    input[type="number"] {
+        padding: 6px; /* Reducir padding para dispositivos pequeños */
     }
 }
 
-/* Estilos adicionales para los botones */
-.btn {
-    margin-right: 10px; /* Espacio entre los botones */
+/* Estilos para dispositivos con un ancho mínimo de 768px y un máximo de 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .converter {
+        padding: 15px; /* Ajustar padding para dispositivos medianos */
+        max-width: 600px; /* Ajustar ancho para dispositivos medianos */
+    }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 1024px */
+@media screen and (min-width: 1024px) {
+    .converter {
+        padding: 20px; /* Ajustar padding para dispositivos grandes */
+        max-width: 800px; /* Mayor ancho para pantallas más grandes */
+    }
 }
